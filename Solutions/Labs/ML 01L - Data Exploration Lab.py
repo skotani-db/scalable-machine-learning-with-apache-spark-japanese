@@ -27,7 +27,7 @@
 
 # MAGIC %md <i18n value="af8bcd70-9430-4470-95b0-2fcff94ed149"/>
 # MAGIC 
-# MAGIC データセットの80%をトレーニングセット、20%をテストセットにします。ここでは、<a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.randomSplit.html?highlight=randomsplit#pyspark.sql.DataFrame.randomSplit" target="_blank">randomSplit</a> メソッドを使用します。
+# MAGIC データセットの80%をトレーニングセット、20%をテストセットにします。ここでは、<a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.randomSplit.html" target="_blank">randomSplit</a> メソッドを使用します。
 # MAGIC 
 # MAGIC トレーニングとテストの分割については後で詳しく説明しますが、このノートブックでは、 **`train_df`** でデータ探索を行ってください。
 
@@ -52,6 +52,7 @@ display(train_df.select("price"))
 # MAGIC %md <i18n value="f9d67fce-097f-40fd-9261-0ec1a5acd12a"/>
 # MAGIC 
 # MAGIC これは<a href="https://en.wikipedia.org/wiki/Log-normal_distribution" target="_blank">対数正規</a>分布でしょうか？価格の **`log`** を取り、ヒストグラムを確認します。これは後々のために覚えておいてください。 :)
+# MAGIC 可視化を追加するため, `+`アイコンをクリックし、`Visualization`を選択してください。可視化を表示するためクエリを再実行する必要があるかもしれないです。
 
 # COMMAND ----------
 
@@ -158,12 +159,13 @@ displayHTML("""
 # MAGIC 0. **`train_df`** :**`train_df`** から平均値と中央値を抽出し、それぞれを変数 **`avg_price`** と **`median_price`** に格納します。
 # MAGIC 0. **`test_df`** :**`avgPrediction`** と **`medianPrediction`** という2つの列を追加し、それぞれ **`train_df`** からの平均値と中央値を格納します。結果DataFrameの名前を **`pred_df`** にします。
 # MAGIC 
+# MAGIC 
 # MAGIC 便利な機能をいくつかご紹介します。
-# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.avg.html?highlight=avg#pyspark.sql.functions.avg" target="_blank">avg()</a>
-# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.col.html?highlight=col#pyspark.sql.functions.col" target="_blank">col()</a>
-# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.lit.html?highlight=lit#pyspark.sql.functions.lit" target="_blank">lit()</a>
-# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.approxQuantile.html?highlight=approxquantile#pyspark.sql.DataFrame.approxQuantile" target="_blank">approxQuantile()</a> **ヒント**:中央値関数がないので、approxQuantileを使用する必要があります。
-# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.withColumn.html?highlight=withcolumn#pyspark.sql.DataFrame.withColumn" target="_blank">withColumn()</a>
+# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.functions.avg.html" target="_blank">avg()</a>
+# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.functions.col.html" target="_blank">col()</a>
+# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.functions.lit.html" target="_blank">lit()</a>
+# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.approxQuantile.html" target="_blank">approxQuantile()</a> **HINT**: There is no median function, so you will need to use approxQuantile
+# MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.withColumn.html" target="_blank">withColumn()</a>
 
 # COMMAND ----------
 

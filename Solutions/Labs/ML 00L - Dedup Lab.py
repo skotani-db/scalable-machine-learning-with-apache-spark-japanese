@@ -57,8 +57,8 @@
 # MAGIC ##![Spark Logo Tiny](https://files.training.databricks.com/images/105/logo_spark_tiny.png) ヒント
 # MAGIC 
 # MAGIC * <a href="https://spark.apache.org/docs/latest/api/python/index.html" target="_blank">API docs</a> を参考にしてください。具体的には、 
-# MAGIC   <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.DataFrame.html?highlight=dataframe#pyspark.sql.DataFrame" target="_blank">DataFrame</a>と
-# MAGIC   <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql.html#functions" target="_blank">functions</a>は演習の完成に役に立ちます。
+# MAGIC   <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/dataframe.html" target="_blank">DataFrame</a>と
+# MAGIC   <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/functions.html" target="_blank">functions</a>は演習の完成に役に立ちます。
 # MAGIC * まずファイルの内容を見て、フォーマットを確認します。 **`dbutils.fs.head()`** (または単に **`%fs head`** ) を使います。
 
 # COMMAND ----------

@@ -14,7 +14,7 @@
 # MAGIC このノートブックでは、Pandas Function APIを使用して、IoTデバイスの機械学習モデルを管理およびスケーリングする方法を説明します。
 # MAGIC 
 # MAGIC ## ![Spark Logo Tiny](https://files.training.databricks.com/images/105/logo_spark_tiny.png) このレッスンで以下を行います:<br>
-# MAGIC  - <a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.GroupedData.applyInPandas.html?highlight=applyinpandas#pyspark.sql.GroupedData.applyInPandas" target="_blank"> **`.groupBy().applyInPandas()`** </a> を使用して、IoT デバイスごとに多数のモデルを並行して構築します。
+# MAGIC  - <a href="https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.GroupedData.applyInPandas.html" target="_blank"> **`.groupBy().applyInPandas()`** </a> を使用して、IoT デバイスごとに多数のモデルを並行して構築します。
 
 # COMMAND ----------
 
