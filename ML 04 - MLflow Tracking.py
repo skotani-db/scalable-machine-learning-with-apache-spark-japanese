@@ -24,8 +24,6 @@
 # MAGIC ## ![Spark Logo Tiny](https://files.training.databricks.com/images/105/logo_spark_tiny.png) このレッスンでは以下を行います。<br>
 # MAGIC * MLflowを使った実験の追跡、メトリクスの記録、実行の比較など
 # MAGIC 
-# MAGIC %md
-# MAGIC <div><img src="https://files.training.databricks.com/images/eLearning/ML-Part-4/mlflow-tracking.png" style="height:400px; margin:20px"/></div>
 
 # COMMAND ----------
 
